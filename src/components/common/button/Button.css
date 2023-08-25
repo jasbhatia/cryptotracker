@@ -1,0 +1,30 @@
+
+.filled{
+    background-color: var(--blue);
+    border-radius: 25px;
+    padding:0.6em 1em;
+    border:2px solid var(--blue);
+    min-width: 130px;
+    font-weight: bold;
+    outline:none;
+    cursor:pointer;
+
+}
+
+.outlined{
+     border-radius: 25px;
+    padding:0.6em 1em;
+    border:2px solid var(--blue);
+    min-width: 130px;
+    font-weight: bold;
+    outline: none;
+     cursor:pointer;
+}
+
+.filled:hover{
+    box-shadow: 3px 3px 7px var(--blue) ;
+}
+
+.outlined:hover{
+    box-shadow: 3px 3px 7px var(--blue) ;
+}

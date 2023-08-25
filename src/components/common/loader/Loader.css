@@ -1,0 +1,15 @@
+.loader-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    z-index: 1000;
+    background-color: var(--darkgrey);
+    color: var(--blue);
+    position: absolute;
+    left:50%;
+    top:50%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
