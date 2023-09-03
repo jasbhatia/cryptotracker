@@ -16,8 +16,10 @@ const Main = () => {
               <motion.p className='info-text' initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1, delay:1}}>Track crypto through a public api in real time.Visit the dashboard to do so! </motion.p>
 
               <motion.div className="btn-flex" initial={{opacity:0,x:50}} animate={{opacity:1,x:0}} transition={{duration:1, delay:1.5}}>
-                  <Button text={"Dashboard"} />
-                  <Button text={"Share" } isOutlined={true}/>
+          
+            <NavLink to="/dashboard"><Button text={"Dashboard"} /></NavLink>  
+         
+           <NavLink to="/share"><Button text={ "Share"} isOutlined={true} /></NavLink>  
               </motion.div>
           </div>
 

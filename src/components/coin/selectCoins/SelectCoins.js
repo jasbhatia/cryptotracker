@@ -64,7 +64,7 @@ export default function SelectCoins({crypto1,crypto2,handleCoinChange }) {
           }
           }
           >
-              {allCoins && allCoins.map((coin) => { return (<MenuItem value={coin.id}>{ coin.name}</MenuItem>) })}
+              {allCoins && allCoins.filter((item)=>item.id !=crypto2).map((coin) => { return (<MenuItem value={coin.id}>{ coin.name}</MenuItem>) })}
          
           
           </Select>
@@ -96,7 +96,7 @@ export default function SelectCoins({crypto1,crypto2,handleCoinChange }) {
           }
           }
           >
-              {allCoins && allCoins.map((coin) => { return (<MenuItem value={coin.id}>{ coin.name}</MenuItem>) })}
+              {allCoins && allCoins.filter((item)=>item.id !=crypto1).map((coin) => { return (<MenuItem value={coin.id}>{ coin.name}</MenuItem>) })}
          
           
         </Select>

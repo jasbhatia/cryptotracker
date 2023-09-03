@@ -14,8 +14,9 @@ const Header = () => {
               <NavLink to="/"><p className="link">Home</p></NavLink>   
               <NavLink to="/compare"><p className="link">Compare</p></NavLink>  
               <NavLink to="/watchList"><p className="link">Watchlist</p></NavLink>  
-                <NavLink to="/dashboard"><Button text={"Dashboard"} /></NavLink>  
-                <NavLink to="/share"><Button text={ "Share"} isOutlined={true} /></NavLink>  
+        <NavLink to="/dashboard"><Button text={"Dashboard"} /></NavLink>
+        {/* <NavLink to="/share"><Button text={ "Share"} isOutlined={true} /></NavLink>  */}
+               
           
       </div>
       

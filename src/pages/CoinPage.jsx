@@ -61,6 +61,22 @@ const CoinPage = () => {
         // const labels = priceData.map(price => convertDate(price[0]));
         //   console.log("arrrrrrr", labels);
 
+        setChartData({
+          labels: priceData.map((price) => convertDate(price[0])),
+          
+          datasets: [{
+            data: priceData.map((price) => price[1]),
+            borderColor: "#3a80e9",
+            borderWidth: 2,
+            fill: true,
+            tension: 0.25,
+            backgroundColor: "rgba(58,128,233,0.1)",
+            pointRadius:0,
+            
+}]
+
+        })
+
       }
     }
     }
@@ -107,7 +123,7 @@ const CoinPage = () => {
         
         <SelectDays days={days} handleDaysChange={handleDaysChange} />
         <TogglePrice priceType={priceType} handlePriceTypeChange={handlePriceTypeChange}/>
-        <LineChart data={ chartData} />
+        <LineChart data={chartData} />
       </div>
       
 

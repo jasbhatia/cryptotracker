@@ -59,16 +59,17 @@ if (priceData1.length > 0  && priceData2.length>0) {
           const data = await getCoinData(e.target.value);
   
       coinObject(setcrypto2Data, data);
-      setLoading(false);
-    
+      
      
   
-   }else{ setCrypto1(e.target.value);
+        } else
+        {
+          setCrypto1(e.target.value);
         
          const data = await getCoinData(e.target.value);
     
       coinObject(setcrypto1Data, data);
-      setLoading(false);
+     
      }
    
    const priceData1 = await getCoinPrices(crypto1, days, priceType);
@@ -84,21 +85,21 @@ if (priceData1.length > 0  && priceData2.length>0) {
     <div >
 
       <Header />
-      <div className="compare-page-div">
+      {crypto1Data && crypto2Data && <div className="compare-page-div">
       <SelectCoins crypto1={crypto1} crypto2={crypto2} handleCoinChange={handleCoinChange} />
       
         <SelectDays days={days} handleDaysChange={handleDaysChange} noPtag={ true} />
-      </div>
+      </div>}   
       
-      <div className="grey-wrapper">
+      {crypto1Data &&  <div className="grey-wrapper">
         <List coin={crypto1Data} style={{ marginBottom: "1em" }} />
-      </div>
+      </div>  }
       
-      <div className="grey-wrapper">
+    {crypto2Data && <div className="grey-wrapper">
         <List coin={crypto2Data} style={{marginBottom:"1em"}} />
-      </div>
-      <CoinInfo heading={crypto1Data.name}  desc={crypto1Data.desc} />
-      <CoinInfo heading={crypto2Data.name} desc={crypto2Data.desc } />
+      </div>  }   
+    {crypto1Data &&   <CoinInfo heading={crypto1Data.name}  desc={crypto1Data.desc} /> }
+      {crypto2Data &&  <CoinInfo heading={crypto2Data.name} desc={crypto2Data.desc } />}
     </div>
   )
 }
