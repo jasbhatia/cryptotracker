@@ -4,6 +4,7 @@ import Button from '../../common/button/Button';
 import phone from '../../../assests/images/phone.png'
 import gradient from '../../../assests/images/gradient.png';
 import { motion } from "framer-motion";
+import { NavLink } from 'react-router-dom';
 
 const Main = () => {
   return (
