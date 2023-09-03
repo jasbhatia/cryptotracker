@@ -13,7 +13,7 @@ const List = ({coin}) => {
      <Link to={`/coin/${coin.id}`}>
     <div>
           <tr className='list-row'>
-              <Tooltip title="Logo Image" placement="bottom-start">
+              <Tooltip title="Logo Image" >
                 <td className="td-image">
               
               <img src={coin.image} alt="loading.." className='coin-logo' />

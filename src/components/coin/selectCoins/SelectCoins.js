@@ -11,19 +11,12 @@ import axios from 'axios';
 import "./SelectCoins.css";
 
 
-export default function SelectCoins({crypto1,crypto2, setCrypto1,setCrypto2}) {
+export default function SelectCoins({crypto1,crypto2,handleCoinChange }) {
  
     
     const [allCoins, setAllCoins] = useState([]);
 
-    function handleCoinChange(e, isCoin2) {
-        
-        if (isCoin2) {
-           setCrypto2(e.target.value) 
-        }
-        else{ setCrypto1(e.target.value);}
-       
-    }
+   
     let url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en";
     useEffect(() => {
     axios.get(url).then((resp) => {
@@ -50,7 +43,7 @@ export default function SelectCoins({crypto1,crypto2, setCrypto1,setCrypto2}) {
           id="demo-simple-select"
           value={crypto1}
           label="Coins"
-          onChange={handleCoinChange}
+          onChange={(e)=>handleCoinChange(e)}
           sx={{
             height: "2.5rem",
             width: "8rem",
